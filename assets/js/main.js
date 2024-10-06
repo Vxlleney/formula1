@@ -21,11 +21,11 @@ function toggleMenu() {
 }
 
 
+// ----------------- DELAI FONCTION  ----------------- //
 
-
-
-
-
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
 
 
 // ----------------- BARRE RECHERCHE CIRCUITS ----------------- //
