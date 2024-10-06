@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- =====UNIICONS===== -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+        <title>Formula 1</title>
+    </head>
+    <body>
+        
+        <nav>
+            <div class="nav">
+
+                <img src="/assets/img/icon.png" alt="">
+
+                <ul>
+                    <li class="item-nav">
+                        <a href="index.html">Accueil</a>
+                    </li>
+
+                    <li class="item-nav">
+                        <a href="actualites.html">Actualités</a>
+                    </li>
+
+                    <li class="item-nav">
+                        <a href="pilotes.html">Pilotes</a>
+                    </li>
+
+                    <li class="item-nav">
+                        <a href="circuits.html">Circuits</a>
+                    </li>
+                </ul>
+
+                <div class="btn-nav">
+                    <a class="btn-login" href="">CONNEXION</a>
+                    <a class="btn-signin" href="">INSCRIPTION</a>
+                </div>
+
+                <i class="uil uil-align-center-alt hamburger" onclick="toggleMenu()"></i>
+            </div>
+
+            <div class="line-bottom-nav"></div>
+
+            <div class="nav-menu">
+                <div class="container-nav-menu">
+                    
+                    <i class="uil uil-angle-right-b hamburger-back" onclick="toggleMenu()"></i>
+
+                    <img src="/assets/img/icon.png" alt="">
+
+                    <a class="btn-login-nav-menu" href="">Connexion</a>
+
+                    <ul>
+                        <li class="btn-nav-menu">
+                            <a href="index.html"><i class="uil uil-estate"></i> Accueil</a>
+                        </li>
+
+                        <li class="btn-nav-menu">
+                            <a href=""><i class="uil uil-newspaper"></i> Actualités</a>
+                        </li>
+
+                        <li class="btn-nav-menu">
+                            <a href="pilotes.html"><i class="uil uil-user"></i> Pilotes</a>
+                        </li>
+
+                        <li class="btn-nav-menu active">
+                            <a href="circuits.html"><i class="uil uil-map"></i> Circuits</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="sct-races">
+            <div class="container-sct-races">
+
+                <div class="content-infos-races"  style="display: none;">
+                    <div class="btn-back-races"><i class="uil uil-angle-left-b"></i></div>
+                    <div class="title-sct-races">
+                        <h1>CIRCUITS DE MONACO</h1>
+                        <h2><i class="uil uil-map-marker"></i> Monaco</h2>
+                    </div>
+
+                    <div class="content-container-infos-races">
+                        <img src="/assets/img/Circuits/monaco_track.png" alt="">
+                        
+                        <div class="infos-races">
+
+
+                        </div>                                            
+                    </div>
+                </div>
+
+                <div class="content-sct-races">
+
+                    <div class="title-sct-races">
+                        <h1>CIRCUITS 2023</h1>
+                    </div>
+
+                    <div class="search-races">
+                        <i class="uil uil-search"></i>
+                        <input id="search-races-input" name="search-races" type="text" placeholder="Rechercher un circuit">
+                    </div>
+
+                    <div class="select-btn-race-sprint">
+
+                        <button onclick="toggleSectionPilotes('container-race')" data-type="race" class="btn-container-drivers selected">COURSES</button>
+                        <button onclick="toggleSectionPilotes('container-sprint')" data-type="sprrint" class="btn-container-drivers">SPRINT</button>
+
+                    </div>
+
+                    <div class="container-races">
+
+                        <div class="content-races">
+
+                            <div class="cards-races" data-keywords="Bahreïn, Sakhir">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Sakhir</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-bahrein.png" alt=""> 
+                                            Bahreïn
+                                        </span>
+                                    </div>
+
+                                    <span class="t"><i class="uil uil-check-circle"></i> Terminé</span>
+                                    <button id="Bahrein" onclick="moreInfosCircuits()">Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-bahrein-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Arabie Saoudite, Djeddah">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Djeddah</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-jeddah.png" alt=""> 
+                                            Arabie Saoudite
+                                        </span>
+                                    </div>
+
+                                    <span class="t"><i class="uil uil-check-circle"></i> Terminé</span>
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-djeddah-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Australie, Melbourne">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Melbourne</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-melbourn.png" alt=""> 
+                                            Australie
+                                        </span>
+                                    </div>
+
+                                    <span class="t"><i class="uil uil-check-circle"></i> Terminé</span>
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-melbourne-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Azerbaïdjan, Bakou">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Bakou</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-azerbeijan.png" alt=""> 
+                                            Azerbaïdjan
+                                        </span>
+                                    </div>
+
+                                    <span class="t"><i class="uil uil-check-circle"></i> Terminé</span>
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-baku-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Etats-Unis, Miami">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Miami</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-usa.png" alt=""> 
+                                            États-Unis
+                                        </span>
+                                    </div>
+
+                                    <span class="t"><i class="uil uil-check-circle"></i> Terminé</span>
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-miami-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Italie, Imola">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit d'Imola</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-italie.png" alt=""> 
+                                            Italie
+                                        </span>
+                                    </div>
+
+                                    <span class="a"><i class="uil uil-times-circle"></i> Annulé</span>
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-er-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Monaco">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Monaco</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-Monaco.png" alt=""> 
+                                            Monaco
+                                        </span>
+                                    </div>
+
+                                    <span class="n"><i class="uil uil-clock"></i> En cours</span>
+                                    <button id="btn-infos-gp" onclick="toggleModdalGP()">Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-monaco-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Espagne, Barcelona-Catalunya">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Barcelona-Catalunya</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-espagne.png" alt=""> 
+                                            Espagne
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-espagne-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Canada, Gilles-Villeneuve">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit Gilles-Villeneuve</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-canada.png" alt=""> 
+                                            Canada
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-canada-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Autriche, Spielberg">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Spielberg</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-autriche.png" alt=""> 
+                                            Autriche
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-autriche-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Grande-Bretagne, Silverstone">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Silverstone</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-gb.png" alt=""> 
+                                            Grande-Bretagne
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-silverstone-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Hongrie, Hungaroring" >
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit du Hungaroring</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-hongrie.png" alt=""> 
+                                            Hongrie
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-hongrie-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Belgique, Spa-Francorchamps">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Spa-Francorchamps</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-belgique.png" alt=""> 
+                                            Belgique
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-spa-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="keywords-Bas, Zandvoort">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Zandvoort</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-keywordsbas.png" alt=""> 
+                                            keywords-Bas
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-keywordsbas-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Italie, Monza">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Monza</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-italie.png" alt=""> 
+                                            Italie
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-monza-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Singapour">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Singapour</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-singapore.png" alt=""> 
+                                            Singapour
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-singapour-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Japon, Suzuka">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Suzuka</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-japon.png" alt=""> 
+                                            Japon
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-japon-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Qatar, International de Lusail">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit International de Lusail</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-qatar.png" alt=""> 
+                                            Qatar
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-qatar-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Etats-Unis, Austin">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit des Amériques</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-usa.png" alt=""> 
+                                            États-Unis
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-us-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Mexique">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit du Mexique</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-mexique.png" alt=""> 
+                                            Mexique
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-mexique-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Bresil">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit du Brésil</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-bresil.png" alt=""> 
+                                            Brésil
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-bresil-trace.png" alt="">
+                            </div>
+
+                            <div class="cards-races" data-keywords="Etats-Unis, Las-Vegas">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit de Las Vegas</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-usa.png" alt=""> 
+                                            États-Unis
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-lasvegas-trace.png" alt="">
+                            </div>
+        
+                            <div class="cards-races" data-keywords="Abou Dabi, Yas Marina">
+                                <div class="content-card-circuit">
+                                    <div class="infos-content-card-circuit">
+                                        <h1>Circuit Yas Marina</h1>
+                                        <span> 
+                                            <img src="assets/img/Flags/flag-aboudabi.png" alt=""> 
+                                            Abou Dabi
+                                        </span>
+                                    </div>
+
+                                    <button>Plus d'infos</button>
+                                </div>
+
+                                <img src="/assets/img/Circuits/circuit-aboudabi-trace.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

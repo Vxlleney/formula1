@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Card Pilotes</title>
+</head>
+<body>
+    <div class="list-drivers">
+        <section class="redbull-sct">
+            <section class="card-pilotes">
+                <div class="line"></div>
+                <div class="infos">
+                    <p>50</p>
+                </div>
+            </section>
+            <!-- Ajoutez plus de card-pilotes au besoin -->
+        </section>
+
+        <section class="ferrari-sct">
+            <section class="card-pilotes">
+                <div class="line"></div>
+                <div class="infos">
+                    <p>10</p>
+                </div>
+            </section>
+            <!-- Ajoutez plus de card-pilotes au besoin -->
+        </section>
+    </div>
+
+    <button onclick="trierCardPilotes()">Trier</button>
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+    function trierCardPilotes() {
+        var listDriversContainer = document.querySelector('.list-drivers');
+    
+        // Récupérer toutes les sections de type "redbull-sct" et "ferrari-sct"
+        var sections = Array.from(listDriversContainer.querySelectorAll('.redbull-sct, .ferrari-sct'));
+    
+        sections.forEach(function (section) {
+            // Récupérer toutes les card-pilotes dans chaque section
+            var cardPilotes = Array.from(section.querySelectorAll('.card-pilotes'));
+    
+            // Trier les card-pilotes en fonction des valeurs dans les balises 'p'
+            cardPilotes.sort(function (a, b) {
+                var aValue = parseInt(a.querySelector('.infos p').textContent);
+                var bValue = parseInt(b.querySelector('.infos p').textContent);
+                return aValue - bValue;
+            });
+    
+            // Supprimer toutes les card-pilotes du conteneur
+            cardPilotes.forEach(function (cardPilote) {
+                section.removeChild(cardPilote);
+            });
+    
+            // Réinsérer les card-pilotes triées dans l'ordre
+            cardPilotes.forEach(function (cardPilote) {
+                section.appendChild(cardPilote);
+            });
+        });
+    }
+    
+    </script>
+</html>

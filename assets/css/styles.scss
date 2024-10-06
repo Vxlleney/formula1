@@ -1,0 +1,1736 @@
+// COLORS LIGHT
+
+$color-1: #e10600;
+$color-2: #fee102;
+$color-3: #020711;
+$color-4: #1f1f27;
+$color-5: #0263fe;
+
+$color-redull: #1414ac;
+$color-mercedes: #6cd3bf;
+$color-ferrari: #f91536;
+$color-astonmartin: #358c75;
+$color-alpine: #2293d1;
+$color-alpharomeo: #c92d4b;
+$color-hass: #b6babd;
+$color-mclaren: #f58020;
+$color-williams: #37bedd;
+$color-alphatauri: #5e8faa;
+
+$color-bg-1: #ffffff;
+$color-bg-2: #ebebeb;
+$color-bg-3: #020711;
+$color-bg-4: #01040a;
+
+$color-text-1: #ffffff;
+$color-text-2: #161927;
+$color-text-3: #848484;
+
+$color-text-b: #ffffff;
+$color-text-n: #161927;
+$color-text-hover: #6d81e7;
+
+$color-icon-1: #6d81e7;
+$color-icon-2: #a6a6a6;
+$color-icons-bg: #ebebeb;
+$color-icons-bg-footer: #242941;
+$color-search: #08142b;
+
+$color-scroll-bg: #020711;
+$color-scrollbar: #ffffff;
+
+$color-hover-btn-menu: #ebebeb;
+$color-btn-menu-back: #ebebeb;
+
+$color-card: #08142b;
+$color-card-2: #0c1b38;
+$color-line: #ebebeb;
+$color-forms: #ffffff;
+$color-tooltip: #2e2e2e;
+
+$color-green: #37be44;
+$color-red: #e52c2c;
+$color-orange: #dd8445;
+
+$color-discord: #6d81e7;
+
+// POLICES
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+$font-nunito: 'Nunito', sans-serif;
+
+$w-font-4: 500;
+$w-font-5: 600;
+$w-font-6: 700;
+
+@font-face {
+    font-family: f1font;
+    src: url(Formula1-Regular.ttf);
+}
+
+$body-font: 'f1font';
+
+// BASE
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+html{
+    scroll-behavior: smooth;
+}
+  
+ul{
+    list-style: none;
+}
+  
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: $color-text-2;
+}
+  
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+// SCROLLBAR
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: $color-scroll-bg;
+}
+
+::-webkit-scrollbar-track:hover{
+    cursor: default;
+}
+ 
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    border: 4px solid rgba(22, 22, 22, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 10px;
+    background-color: $color-scrollbar;
+}
+
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+
+// CONTENT
+
+body{
+    background-color: $color-bg-3;
+    font-family: $body-font;
+    color: $color-text-2;
+
+    html{
+        scroll-behavior: smooth;
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+        text-decoration: none;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }   
+    }
+
+    nav{
+        width: 100%;
+        height: auto;
+        background-color: $color-3;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.581);
+        position: fixed;
+
+        // NAVBAR RESPONSIVE
+        
+        .nav-menu{
+            transform: translateX(100%);
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $color-bg-3;
+            padding: 30px 20px;
+            transition: 0.3s ease;
+
+            &.none{
+                display: none;
+            }
+            
+            &.active{
+                transform: translateX(0);
+                width: 100%;
+                transition: 0.3s ease;
+            }
+
+            .container-nav-menu{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+
+                .hamburger-back{
+                    margin-top: -20px;
+                    display: flex;
+                    margin-left: auto;
+                    font-size: 2rem;
+                    color: $color-text-b;
+                    cursor: pointer;
+                    margin-bottom: 40px;
+
+                }
+
+                img{
+                    width: 100px;
+                    height: auto;
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                }
+
+                .btn-login-nav-menu{
+                    width: 100%;
+                    background-color: $color-1;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    margin: 0 auto;
+                    color: $color-text-b;
+                    border: 2px solid $color-1;
+                    transition: .3s;
+                    text-align: center;
+                    margin-bottom: 40px;
+        
+                    &:hover{
+                        transition: .3s;
+                        background-color: transparent;
+                        color: $color-1;
+                        border: 2px solid $color-1;
+                    }
+
+                    a{
+                        text-align: center;
+                    }
+                }
+
+                ul{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    margin: 0 auto;
+                    text-align: left;
+
+                    .btn-nav-menu{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 14px 15px;
+                        border-radius: 8px;
+                        background-color: $color-card;
+                        border-left: 3px $color-card solid;
+
+                        &:hover, &.active{
+                            transition: .3s;
+                            background-color: $color-card;
+                            filter: brightness(110%);
+                            border-left: 3px $color-1 solid;
+                        }
+                        
+                        a{
+                            color: $color-text-b;
+                            font-size: .9rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+                            i{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // NAVBAR CLASSIC
+    
+        .line-bottom-nav{
+            width: 90%;
+            height: 1px;
+            background-color: $color-3;
+            margin: 0 auto;
+        }
+    
+        .nav{
+            max-width: 1024px;
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            padding: 35px 20px;
+            align-items: center;
+            justify-content: space-between;
+    
+            img{
+                height: 40px;
+                width: auto;
+            }
+
+            .hamburger{
+                display: none;
+                font-size: 2rem;
+                color: $color-text-b;
+                float: right;
+                cursor: pointer;
+                margin-right: 10px;
+    
+                @media screen and (max-width: 1024px) {
+                    display: block;
+                }
+            }
+    
+            ul{
+                display: flex;
+                gap: 35px;
+                align-items: center;
+                font-size: .850rem;
+                font-weight: $w-font-4;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
+                
+                a{
+                    color: $color-text-b;
+                    transition: .3s;
+    
+                    &:hover{
+                        color: $color-1;
+                        transition: .3s;
+                    }
+                }
+            }
+    
+            .btn-nav{
+                display: flex;
+                gap: 10px;
+                font-size: .750rem;
+
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
+
+                .btn-signin{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: $color-1;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    justify-items: center;
+                    color: $color-text-b;
+                    border: 2px solid $color-1;
+                    transition: .3s;
+            
+                    i{
+                        font-size: 1.1rem;
+                    }
+        
+                    &:hover{
+                        transition: .3s;
+                        background-color: transparent;
+                        color: $color-1;
+                        border: 2px solid $color-1;
+                    }
+                }
+
+                .btn-login{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: $color-4;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    justify-items: center;
+                    color: $color-text-b;
+                    transition: .3s;
+                    border: 2px solid $color-4;
+        
+                    i{
+                        font-size: 1.1rem;
+                    }
+        
+                    &:hover{
+                        transition: .3s;
+                        background-color: $color-4;
+                        filter: brightness(110%);
+                    }
+                }
+            }
+        }
+    }
+    
+    header{
+        background-image: url('/assets/img/header.png');
+        width: 100%;
+        height: 950px;
+        
+    
+        .header-container{
+            max-width: 1440px;
+            height: auto;
+            margin: 0 auto;
+            padding: 250px 20px;
+
+            h2{
+                font-size: 1.5rem;
+                color: $color-text-b;
+                font-weight: $w-font-6;
+            }
+
+            h1{
+                font-size: 3rem;
+                color: $color-text-b;
+                font-weight: $w-font-6;
+            }
+
+            .btn-header{
+                display: flex;
+                gap: 20px;
+                margin-top: 40px;
+
+                .btn-1{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    background-color: $color-1;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-items: center;
+                    color: $color-text-b;
+                    border: 2px solid $color-1;
+                    transition: .3s;
+    
+                    i{
+                        font-size: 1.3rem;
+                    }
+    
+                    &:hover{
+                        transition: .3s;
+                        background-color: transparent;
+                        color: $color-1;
+                        border: 2px solid $color-1;
+                    }
+                }
+
+                .btn-2{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: $color-4;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-items: center;
+                    color: $color-text-b;
+                    transition: .3s;
+                    border: 2px solid $color-4;
+        
+                    i{
+                        font-size: 1.1rem;
+                    }
+        
+                    &:hover{
+                        transition: .3s;
+                        background-color: $color-4;
+                        filter: brightness(110%);
+                    }
+                }
+            }
+        }
+    }
+
+    // SECTION 1 ACCUEIL
+
+    .sct-1{
+        width: 100%;
+        height: auto;
+        background-color: $color-bg-3;
+
+        .container-sct-1{
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 100px 20px 100px 40px;
+
+            .title-sct-1{
+                margin-bottom: 80px;
+                
+                h1{
+                    font-size: 2rem;
+                    color: $color-text-b;
+                    font-weight: $w-font-6;
+                    text-align: center;
+                }
+            }
+
+            .content-sct-1{
+                display: flex;
+                justify-content: space-between;
+
+                .infos-nextgp{
+                    width: 40%;
+                    color: $color-text-b;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+
+                    .title-nextgp{
+                        color: $color-text-b;
+                        
+                        h1{
+                            font-size: 2rem;
+                            font-weight: $w-font-6;
+                            text-transform: uppercase;
+                        }
+
+                        span{
+                            font-size: 1rem;
+                            font-weight: $w-font-4;
+                            color: $color-1;
+                        }
+                    }
+
+                    .stats-nextgp{
+                        display: flex;
+                        justify-content: space-between;
+
+                        .stats-nextgp-content{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 40px;
+
+                            h3{
+                                color: $color-2;
+                                font-size: 1rem;
+                                font-weight: $w-font-4;
+                            }
+
+                            span{
+                                color: $color-text-b;
+                                font-size: 1.3rem;
+                                font-weight: $w-font-6;
+                            }
+                        }
+                    }
+                }
+
+                img{
+                    width: 600px;
+                    height: auto;
+                }
+            }
+
+        }
+    }
+
+    // PAGE CICRUITS 2023
+
+    .sct-races{
+        width: 100%;
+        height: 100%;
+        background-color: $color-bg-3;
+
+        .container-sct-races{
+            max-width: 1600px;
+            padding: 100px 0;
+            margin: 0 auto;
+            display: flex;
+
+            .content-sct-races{
+                height: auto;
+                width: 100%;
+//                border-radius: 60px;
+                padding: 40px;
+//                background-color: $color-card;
+
+                @media screen and (max-width: 550px) {
+                    padding: 30px;
+                }
+
+                .title-sct-races{
+                    margin-bottom: 30px;
+                    
+                    h1{
+                        font-size: 2rem;
+                        color: $color-text-b;
+                        font-weight: $w-font-6;
+                        text-align: center;
+                    }
+                }
+
+                .search-races{
+                    display: flex;
+                    margin: 0 auto;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    background-color: $color-search;
+                    height: 50px;
+                    width: 40%;
+                    border-radius: 30px;
+                    padding: 0 0 0 15px;
+
+                    @media screen and (max-width: 1030px) {
+                        width: 50%;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        width: 60%;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        width: 80%;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 100%;
+                    }
+
+                    i{
+                        font-size: 1.2rem;
+                        color: $color-text-b;
+
+                    }
+
+                    input{
+                        border: none;
+                        font-size: .8rem;
+                        font-family: $body-font;
+                        background-color: $color-search;
+                        color: $color-text-b;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 30px;
+                        padding: 20px;
+                        text-align: left;
+
+                        &:focus{
+                            outline: transparent;
+                        }
+                    }
+                }
+
+                .select-btn-race-sprint{
+                    display: flex;
+                    width: auto;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 40px 20px;
+
+                    @media screen and (max-width: 510px) {
+                        padding: 30px 0;
+                    }
+
+                    button{
+                        font-family: $body-font;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        background-color: $color-card;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        display: flex;
+                        justify-items: center;
+                        color: $color-text-b;
+                        border: 2px solid $color-card;
+                        transition: .3s;
+                        cursor: pointer;
+        
+                        i{
+                            font-size: 1.3rem;
+                        }
+        
+                        &:hover{
+                            transition: .3s;
+                            background-color: $color-card;
+                            filter: brightness(110%);
+                        }
+
+                        &.selected{
+                            background-color: $color-1;
+                        }
+                    }
+                }
+
+
+                .container-races{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    .content-races{
+                        width: 1460px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: 30px;
+
+                        @media screen and (max-width: 1592px) {
+                            justify-content: center;
+                        }
+
+                        .cards-races{
+                            background-color: $color-card;
+                            width: 460px;
+                            height: 150px;
+                            border-radius: 15px;
+                            padding: 20px 25px;
+                            border-left: 5px solid $color-1;
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 10px;
+                            box-shadow: 2px 2px 5px 2px rgb(0, 0, 0, 0.08);
+
+                            @media screen and (max-width: 550px) {
+                                width: 100%;
+                                height: auto;
+                            }
+
+                            img{
+                                width: auto;
+                                height: 100px;
+                                display: flex;
+                                margin: auto 0;
+
+                                @media screen and (max-width: 480px) {
+                                    height: 70px;
+                                }
+                            }
+
+                            .content-card-circuit{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 10px;
+
+                                span{
+                                    display: flex;
+                                    gap: 5px;
+                                    align-items: center;
+                                    font-size: .9rem;
+
+                                    i{
+                                        font-size: 1.050rem;
+                                    }
+                                    
+                                    &.t{
+                                        color: $color-green;
+                                    }
+
+                                    &.a{
+                                        color: $color-red;
+                                    }
+
+                                    &.n{
+                                        color: $color-orange;
+                                    }
+                                }
+
+                                button{
+                                    background-color: transparent;
+                                    border: none;
+                                    text-align: left;
+                                    cursor: pointer;
+                                    color: $color-1;
+                                    font-size: .8rem;
+                                    font-family: $body-font;
+                                    transition: .3s;
+
+                                    &:hover{
+                                        text-decoration: underline;
+                                        transition: .3s;
+                                    }
+                                }
+
+                                .infos-content-card-circuit{
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    h1{
+                                        color: $color-text-b;
+                                        font-size: 1.2rem;
+                                    }
+                                    
+                                    span{
+                                        color: $color-text-b;
+                                        font-size: .8rem;
+                                        display: flex;
+                                        margin-top: 5px;
+                                        gap: 8px;
+                                        
+                                        img{
+                                            width: 20px;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // MODAL AFFICHAGE CIRCUITS STATS
+
+            .content-infos-races{
+                height: auto;
+                width: 100%;
+//                border-radius: 60px;
+                padding: 40px;
+//                background-color: $color-card;
+
+                @media screen and (max-width: 550px) {
+                    padding: 30px;
+                }
+
+                .btn-back-races{
+                    display: flex;
+                    color: $color-text-b;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+
+                .title-sct-races{
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 70px;
+                    
+                    h1{
+                        font-size: 2rem;
+                        color: $color-text-b;
+                        font-weight: $w-font-6;
+                        text-align: center;
+                    }
+
+                    h2{
+                        i{
+                            font-size: 1.3rem;
+                        }
+
+                        font-size: 1rem;
+                        color: $color-1;
+                        font-weight: $w-font-5;
+                        text-align: center;
+                    }
+                }
+
+                .content-container-infos-races{
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    align-items: center;
+
+                    img{
+                        width: 60%;
+                        height: auto;
+                    }
+
+                    .infos-races{
+                        width: 450px;
+                        height: 500px;
+                        background-color: $color-card;
+                        border-radius: 15px;
+                    
+                    }
+                }
+            }
+        }
+    }
+    
+    // PAGE LISTE + STATS PILOTES 
+
+    .sct-drivers{
+        width: 100%;
+        height: auto;
+        background-color: $color-bg-3;
+
+        .container-sct-drivers{
+            max-width: 1600px;
+            padding: 100px 0;
+            margin: 0 auto;
+            display: flex;
+
+            .content-sct-drivers{
+                height: auto;
+                width: 100%;
+//                border-radius: 60px;
+                padding: 40px;
+//                background-color: $color-card;
+
+                @media screen and (max-width: 480px) {
+                    padding: 30px;
+                }
+
+                .title-sct-drivers{
+                    margin-bottom: 30px;
+                    
+                    h1{
+                        font-size: 2rem;
+                        color: $color-text-b;
+                        font-weight: $w-font-6;
+                        text-align: center;
+
+                        @media screen and (max-width: 1520px) {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .search-drivers{
+                    display: flex;
+                    margin: 0 auto;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    background-color: $color-search;
+                    height: 50px;
+                    width: 40%;
+                    border-radius: 30px;
+                    padding: 0 0 0 15px;
+
+                    @media screen and (max-width: 1030px) {
+                        width: 50%;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        width: 60%;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        width: 80%;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 100%;
+                    }
+
+                    i{
+                        font-size: 1.2rem;
+                        color: $color-text-b;
+
+                    }
+
+                    .container-drivers.hide, .container-ecuries.hide, .container-championnat.hide{
+                        display: none;
+                    }
+
+                    input{
+                        border: none;
+                        font-size: .8rem;
+                        font-family: $body-font;
+                        background-color: $color-search;
+                        color: $color-text-b;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 30px;
+                        padding: 20px;
+                        text-align: left;
+
+                        &:focus{
+                            outline: transparent;
+                        } 
+                    }
+                }
+
+                .select-btn-menu-drivers{
+                    display: flex;
+                    width: auto;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 40px 20px;
+
+                    @media screen and (max-width: 510px) {
+                        justify-content: left;
+                        padding: 30px 0;
+                    }
+
+                    overflow-x: scroll;
+	                overflow-y: hidden;
+                    -ms-overflow-style: none; 
+                    scrollbar-width: none;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    button{
+                        font-family: $body-font;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        background-color: $color-card;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        display: flex;
+                        justify-items: center;
+                        color: $color-text-b;
+                        border: 2px solid $color-card;
+                        transition: .3s;
+                        cursor: pointer;
+        
+                        i{
+                            font-size: 1.3rem;
+                        }
+        
+                        &:hover{
+                            transition: .3s;
+                            background-color: $color-card;
+                            filter: brightness(110%);
+                        }
+
+                        &.selected{
+                            background-color: $color-1;
+                        }
+                    }
+                }
+
+                .container-drivers{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+
+                    .list-drivers{
+                        width: 1370px;
+                        height: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        @media screen and (max-width: 1490px) {
+                            width: 1020px;
+                            justify-content: center;
+                        }
+
+
+                        @media screen and (max-width: 750px) {
+                            width: 320px;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            width: 100%;
+                        }
+                    
+                        .redbull-sct,
+                        .ferrari-sct,
+                        .mercedes-sct,
+                        .astonmartin-sct,
+                        .alpine-sct,
+                        .mclaren-sct,
+                        .williams-sct,
+                        .hass-sct,
+                        .alphatauri-sct,
+                        .alpharomeo-sct{
+                            display: flex;
+                            flex-direction: column;
+
+                            @media screen and (max-width: 500px) {
+                                width: 100%;
+                            }
+                            
+                            .cards-drivers{
+                                height: auto;
+                                width: 430px;
+                                background-color: $color-card;
+                                border-radius: 15px;
+                                padding: 15px 25px;
+                                display: flex;
+                                gap: 20px;
+                                margin-bottom: 20px;
+                                margin-right: 10px;
+                                margin-left: 10px;
+
+                                @media screen and (max-width: 500px) {
+                                    width: 100%;
+                                    margin: 20px auto auto 0;
+                                }
+    
+                                .img-drivers{
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 4px;
+    
+                                    img{
+                                        border-radius: 50%;
+                                    }
+    
+                                    &.redbull{
+                                        border: 2px solid $color-redull;
+                                    }
+    
+                                    &.ferrari{
+                                        border: 2px solid $color-ferrari;
+                                    }
+    
+                                    &.astonmartin{
+                                        border: 2px solid $color-astonmartin;
+                                    }
+    
+                                    &.mercedes{
+                                        border: 2px solid $color-mercedes;
+                                    }
+    
+                                    &.alpine{
+                                        border: 2px solid $color-alpine;
+                                    }
+    
+                                    &.alphatauri{
+                                        border: 2px solid $color-alphatauri;
+                                    }
+    
+                                    &.alpharomeo{
+                                        border: 2px solid $color-alpharomeo;
+                                    }
+    
+                                    &.hass{
+                                        border: 2px solid $color-hass;
+                                    }
+    
+                                    &.mclaren{
+                                        border: 2px solid $color-mclaren;
+                                    }
+    
+                                    &.williams{
+                                        border: 2px solid $color-williams;
+                                    }
+                                }
+    
+                                .infos-drivers{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    gap: 5px;
+                                    color: $color-text-b;
+    
+                                    h1{
+                                        font-size: 1rem;
+                                    }
+    
+                                    h2{
+                                        font-size: .90rem;
+    
+                                        &.redbull{
+                                            color: $color-redull;
+                                        }
+    
+                                        &.ferrari{
+                                            color: $color-ferrari;
+                                        }
+    
+                                        &.astonmartin{
+                                            color: $color-astonmartin;
+                                        }
+    
+                                        &.mercedes{
+                                            color: $color-mercedes;
+                                        }
+    
+                                        &.alpine{
+                                            color: $color-alpine;
+                                        }
+    
+                                        &.williams{
+                                            color: $color-williams;
+                                        }
+    
+                                        &.mclaren{
+                                            color: $color-mclaren;
+                                        }
+    
+                                        &.hass{
+                                            color: $color-hass;
+                                        }
+    
+                                        &.alphatauri{
+                                            color: $color-alphatauri;
+                                        }
+    
+                                        &.alpharomeo{
+                                            color: $color-alpharomeo;
+                                        }
+                                    }
+                                }
+
+                                .stats-drivers{
+                                    padding-top: 15px;
+                                    display: flex;
+                                    gap: 30px;
+
+                                    span{
+                                        font-size: .80rem;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+
+                                        i{
+                                            font-size: .8rem;
+                                            color: yellow;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .container-ecuries{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+
+                    .list-ecuries{
+                        width: 1370px;
+                        height: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        @media screen and (max-width: 1490px) {
+                            width: 1020px;
+                            justify-content: center;
+                        }
+
+
+                        @media screen and (max-width: 750px) {
+                            width: 100%;
+                        }
+
+                        .cards-ecuries{
+                            height: auto;
+                            width: 430px;
+                            background-color: $color-card;
+                            border-radius: 15px;
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            margin-bottom: 20px;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            cursor: pointer;
+
+                            @media screen and (max-width: 510px) {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-left: 0;
+                            }
+                            
+                            &.redbull{
+                                border-left: 5px solid $color-redull;
+                            }
+
+                            &.ferrari{
+                                border-left: 5px solid $color-ferrari;
+                            }
+
+                            &.astonmartin{
+                                border-left: 5px solid $color-astonmartin;
+                            }
+
+                            &.mercedes{
+                                border-left: 5px solid $color-mercedes;
+                            }
+    
+                            &.alpine{
+                                border-left: 5px solid $color-alpine;
+                            }
+
+                            &.alphatauri{
+                                border-left: 5px solid $color-alphatauri;
+                            }
+
+                            &.alpharomeo{
+                                border-left: 5px solid $color-alpharomeo;
+                            }
+
+                            &.hass{
+                                border-left: 5px solid $color-hass;
+                            }
+
+                            &.mclaren{
+                                border-left: 5px solid $color-mclaren;
+                            }
+
+                            &.williams{
+                                border-left: 5px solid $color-williams;
+                            }
+
+                            @media screen and (max-width: 510px) {
+                                width: 100%;
+                            }
+
+                            h1{
+                                font-size: 1.2rem;
+                                color: $color-text-b;
+
+                                @media screen and (max-width: 980px) {
+                                    text-align: center;
+                                }
+                                
+                            }
+        
+                            .img-drivers{
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 20px 5px;
+                            }
+    
+                            .infos-ecuries{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 5px;
+                                color: $color-text-b;
+    
+                                h1{
+                                    font-size: 1rem;
+                                }
+    
+                                h2{
+                                    font-size: .90rem;
+                                }
+    
+                                &.redbull{
+                                    color: $color-redull;
+                                }
+    
+                                &.ferrari{
+                                    color: $color-ferrari;
+                                }
+
+                                &.astonmartin{
+                                    color: $color-astonmartin;
+                                }
+    
+                                &.mercedes{
+                                    color: $color-mercedes;
+                                }
+    
+                                &.alpine{
+                                    color: $color-alpine;
+                                }
+    
+                                &.williams{
+                                    color: $color-williams;
+                                }
+
+                                &.mclaren{
+                                    color: $color-mclaren;
+                                }
+    
+                                &.hass{
+                                    color: $color-hass;
+                                }
+    
+                                &.alphatauri{
+                                    color: $color-alphatauri;
+                                }
+    
+                                &.alpharomeo{
+                                    color: $color-alpharomeo;
+                                }
+                            }
+
+                            .stats-drivers{
+                                padding-top: 15px;
+                                display: flex;
+                                gap: 30px;
+
+                                span{
+                                    font-size: .80rem;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+
+                                    i{
+                                        font-size: .8rem;
+                                        color: yellow;
+                                    }
+                                 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .container-championnat{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .card-table-championnat{
+                        width: 100%;
+                        height: 100%;
+                        padding: 40px;
+                        border-radius: 15px;
+                        background-color: $color-card;
+
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        -ms-overflow-style: none; 
+                        scrollbar-width: none;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .title-table-championnat{
+                            display: flex;
+                            justify-content: space-between;
+
+                            .item-left-table{
+                                display: flex;
+                                gap: 40px;
+                                align-items: center;
+
+                                h2{
+                                    font-size: 1.3rem;
+                                    color: $color-text-b;
+                                }
+
+                                .btn-championnat-select{
+                                    width: auto;
+                                    display: flex;
+                                    background-color: $color-card-2;
+                                    border-radius: 10px;
+                                    overflow: hidden;
+                                    
+                                    button{
+                                        font-family: $body-font;
+                                        display: flex;
+                                        border: none;
+                                        background-color: $color-card-2;
+                                        color: $color-text-b;
+                                        padding: 12px 25px;
+                                        cursor: pointer;   
+                                        transition: .3s ease-in-out;       
+
+                                        &.active{
+                                            background-color: $color-1;
+                                            transition: .3s ease-in-out;       
+                                        }
+                                    }
+                                }
+                            }
+
+                            a{
+                                font-size: .9rem;
+                                color: $color-1;
+                                transition: .3s ease;
+
+                                &:hover{
+                                    text-decoration: underline;
+                                    transition: .3s ease;
+                                }
+
+                                i{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+
+                        .line-table-championnat{
+                            width: 100%;
+                            height: 1px;
+                            background-color: $color-bg-3;
+                            margin: 20px 0;
+                        }
+                        
+                      
+                        .table-championnat{
+                            margin-top: 40px;
+                            width: 100%;
+                            border-collapse: collapse;
+                            text-align: left;
+                            color: $color-text-b;
+
+                            th{
+                                border-bottom: 1px solid $color-bg-3;
+                            }
+
+                            tr:nth-child(even){
+                                background-color: $color-card-2;
+                            }
+
+                            th, td{
+                                padding: 20px 20px;
+                            }
+
+                        }
+
+                    }
+
+
+
+                    .card-championnat{
+                        background-color: $color-card;
+                        width: 100%;
+                        height: 100px;
+                        padding: 20px 30px;
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                            width: 60px;
+                            height: auto;
+                            border-radius: 50%;
+                            border-color: 2px solid $color-redull;
+                        }
+
+                        &.redbull{
+                            border-left: 5px solid $color-redull;
+                        }
+
+                        &.ferrari{
+                            border-left: 5px solid $color-ferrari;
+                        }
+
+                        &.astonmartin{
+                            border-left: 5px solid $color-astonmartin;
+                        }
+
+                        &.mercedes{
+                            border-left: 5px solid $color-mercedes;
+                        }
+
+                        &.alpine{
+                            border-left: 5px solid $color-alpine;
+                        }
+
+                        &.alphatauri{
+                            border-left: 5px solid $color-alphatauri;
+                        }
+
+                        &.alpharomeo{
+                            border-left: 5px solid $color-alpharomeo;
+                        }
+
+                        &.hass{
+                            border-left: 5px solid $color-hass;
+                        }
+
+                        &.mclaren{
+                            border-left: 5px solid $color-mclaren;
+                        }
+
+                        &.williams{
+                            border-left: 5px solid $color-williams;
+                        }
+                    }
+                }
+
+
+                .container-championnat, .container-drivers, .container-ecuries{
+
+                    &.hide{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // PAGE DE CONNEXION AU DASHBOARD
+
+    .sct-login{
+        background: url('/assets/img/wallpaper-login.png');
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+
+        .container-login{
+            margin-left: -300px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            
+
+            .card-login{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 500px;
+                height: auto;
+                border-radius: 10px;
+                //box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+                padding: 20px;
+
+                h1{
+                    font-size: 2.5rem;
+                    font-weight: $w-font-6;
+                    color: $color-text-1;
+                }
+
+                p{
+                    letter-spacing: -.5px;
+                    font-size: .9rem;
+                    font-weight: $w-font-5;
+                    color: $color-text-3;
+                    margin-top: 10px;
+                }
+
+                .form-login{
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+
+                    .id-login,
+                    .password-login{
+                        display: flex;
+
+                        input{
+                            height: 60px;
+                            width: 280px;
+                            background-color: $color-card;
+                            border-radius: 0 5px 5px 0;
+                            border: 2px solid transparent;
+                            padding: 20px;
+                            color: $color-text-b;
+                            font-size: .8rem;
+                            font-family: $body-font;
+                            
+                            &::placeholder{
+                                color: $color-text-b;
+                            }
+
+                            &:focus{
+                                outline: $color-2;
+                            }
+                        }
+    
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 50px;
+                            background-color: $color-card;
+                            border-radius: 5px 0 0 5px;
+
+                            i{
+                                font-size: 1.5rem;
+                                color: $color-text-b;
+                            }
+                        }
+                    }
+                }
+
+                .return-login{
+                    margin-top: 25px;
+                    font-size: .9rem;
+                    font-weight: $w-font-5;
+                    color: $color-1;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover{
+                        border-bottom: 1px solid $color-1;
+                    }
+
+                }
+
+                .btn-login{
+                    font-family: $body-font;
+                    margin-top: 30px;
+                    width: 330px;
+                    height: 50px;
+                    background-color: $color-1;
+                    color: $color-text-b;
+                    font-size: 1rem;
+                    font-weight: $w-font-5; 
+                    text-align: center;
+                    border: 2px solid $color-1;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .3s ease;
+                    box-shadow: 2px 2px 10px -6px rgb(225, 6, 0,2);
+
+                    &:hover{
+                        transition: .3s ease;
+                        transform: translateY(-1px);
+                    }
+                }
+            }
+        }
+    }
+}   
+
+// ----------- KEY FRAME ------------------
+
+@keyframes animationRightButton {
+    0% {
+		opacity: 1;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationLeftButton {
+    0% {
+		opacity: 1;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
