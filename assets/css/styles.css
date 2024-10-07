@@ -922,6 +922,7 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .alpharomeo-sct .cards-drivers {
     width: 100%;
     margin: 20px auto auto 0;
+    padding: 10px 15px;
   }
 }
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .redbull-sct .cards-drivers .img-drivers,
@@ -935,12 +936,12 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .alphatauri-sct .cards-drivers .img-drivers,
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .alpharomeo-sct .cards-drivers .img-drivers {
   width: 80px;
-  height: 80px;
+  height: auto;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 3px;
 }
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .redbull-sct .cards-drivers .img-drivers img,
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .ferrari-sct .cards-drivers .img-drivers img,
@@ -1365,14 +1366,6 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries h1 {
     text-align: center;
   }
-}
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .img-drivers {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 5px;
 }
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries {
   display: flex;

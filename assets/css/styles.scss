@@ -1079,17 +1079,19 @@ body{
                                 @media screen and (max-width: 500px) {
                                     width: 100%;
                                     margin: 20px auto auto 0;
+                                    padding: 10px 15px;
                                 }
+
     
                                 .img-drivers{
                                     width: 80px;
-                                    height: 80px;
+                                    height: auto;
                                     border-radius: 50%;
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    padding: 4px;
-    
+                                    padding: 3px;
+
                                     img{
                                         border-radius: 50%;
                                     }
@@ -1309,15 +1311,6 @@ body{
                                     text-align: center;
                                 }
                                 
-                            }
-        
-                            .img-drivers{
-                                width: 100%;
-                                height: auto;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                padding: 20px 5px;
                             }
     
                             .infos-ecuries{
