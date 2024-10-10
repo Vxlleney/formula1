@@ -1,606 +1,1513 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- =====UNIICONS===== -->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="icon" type="image/png" href="./assets/img/icon.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =====UNIICONS===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-        <title>Formula 1 - Pilotes</title>
-    </head>
-    <body>
-        
-        <nav>
-            <div class="nav">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+    <title>Formula 1 - Pilotes</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav">
+
+            <img src="/assets/img/icon.png" alt="">
+
+            <ul>
+                <li class="item-nav">
+                    <a href="index.html">Accueil</a>
+                </li>
+
+                <li class="item-nav">
+                    <a href="actualites.html">Actualités</a>
+                </li>
+
+                <li class="item-nav">
+                    <a href="pilotes.html">Pilotes</a>
+                </li>
+
+                <li class="item-nav">
+                    <a href="circuits.html">Circuits</a>
+                </li>
+            </ul>
+
+            <div class="btn-nav">
+                <a class="btn-login" href="">CONNEXION</a>
+                <a class="btn-signin" href="">INSCRIPTION</a>
+            </div>
+
+            <i class="uil uil-align-center-alt hamburger" onclick="toggleMenu()"></i>
+        </div>
+
+        <div class="line-bottom-nav"></div>
+
+        <div class="nav-menu">
+            <div class="container-nav-menu">
+
+                <i class="uil uil-angle-right-b hamburger-back" onclick="toggleMenu()"></i>
 
                 <img src="/assets/img/icon.png" alt="">
 
+                <a class="btn-login-nav-menu" href="">Connexion</a>
+
                 <ul>
-                    <li class="item-nav">
-                        <a href="index.html">Accueil</a>
+                    <li class="btn-nav-menu">
+                        <a href="index.html"><i class="uil uil-estate"></i> Accueil</a>
                     </li>
 
-                    <li class="item-nav">
-                        <a href="actualites.html">Actualités</a>
+                    <li class="btn-nav-menu">
+                        <a href=""><i class="uil uil-newspaper"></i> Actualités</a>
                     </li>
 
-                    <li class="item-nav">
-                        <a href="pilotes.html">Pilotes</a>
+                    <li class="btn-nav-menu active">
+                        <a href="pilotes.html"><i class="uil uil-user"></i> Pilotes</a>
                     </li>
 
-                    <li class="item-nav">
-                        <a href="circuits.html">Circuits</a>
+                    <li class="btn-nav-menu">
+                        <a href="circuits.html"><i class="uil uil-map"></i> Circuits</a>
                     </li>
                 </ul>
 
-                <div class="btn-nav">
-                    <a class="btn-login" href="">CONNEXION</a>
-                    <a class="btn-signin" href="">INSCRIPTION</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="sct-drivers">
+        <div class="container-sct-drivers">
+
+            <div class="content-sct-drivers">
+
+                <div class="title-sct-drivers">
+                    <h1 id="title-drivers">Liste des Pilotes</h1>
                 </div>
 
-                <i class="uil uil-align-center-alt hamburger" onclick="toggleMenu()"></i>
-            </div>
+                <div class="search-drivers">
+                    <i class="uil uil-search"></i>
+                    <input id="search-drivers-input" class="container-drivers" name="search-drivers" type="text"
+                        placeholder="Rechercher un pilotes">
+                    <input id="search-ecuries-input" class="container-ecuries hide" name="search-drivers" type="text"
+                        placeholder="Rechercher une écurie">
+                    <input id="search-championnat-input" class="container-championnat hide" name="search-drivers"
+                        type="text" placeholder="Rechercher un pilotes">
+                </div>
 
-            <div class="line-bottom-nav"></div>
+                <div class="select-btn-menu-drivers">
 
-            <div class="nav-menu">
-                <div class="container-nav-menu">
-                    
-                    <i class="uil uil-angle-right-b hamburger-back" onclick="toggleMenu()"></i>
-
-                    <img src="/assets/img/icon.png" alt="">
-
-                    <a class="btn-login-nav-menu" href="">Connexion</a>
-
-                    <ul>
-                        <li class="btn-nav-menu">
-                            <a href="index.html"><i class="uil uil-estate"></i> Accueil</a>
-                        </li>
-
-                        <li class="btn-nav-menu">
-                            <a href=""><i class="uil uil-newspaper"></i> Actualités</a>
-                        </li>
-
-                        <li class="btn-nav-menu active">
-                            <a href="pilotes.html"><i class="uil uil-user"></i> Pilotes</a>
-                        </li>
-
-                        <li class="btn-nav-menu">
-                            <a href="circuits.html"><i class="uil uil-map"></i> Circuits</a>
-                        </li>
-                    </ul>
+                    <button onclick="toggleSectionPilotes('container-drivers')" data-type="pilotes"
+                        class="btn-container-drivers selected">PILOTES</button>
+                    <button onclick="toggleSectionPilotes('container-ecuries')" data-type="ecuries"
+                        class="btn-container-drivers">ÉCURIES</button>
+                    <button onclick="toggleSectionPilotes('container-championnat')" data-type="championnat"
+                        class="btn-container-drivers">CHAMPIONNAT</button>
 
                 </div>
-            </div>
-        </nav>
 
-        <section class="sct-drivers">
-            <div class="container-sct-drivers">
+                <div class="container-drivers">
+                    <div class="list-drivers">
+                        <div class="redbull-sct">
 
-                <div class="content-sct-drivers">
+                            <div class="card-drivers" data-keywords="Max Verstappen, Redbull">
 
-                    <div class="title-sct-drivers">
-                        <h1 id="title-drivers">Liste des Pilotes</h1>
-                    </div>
-
-                    <div class="search-drivers">
-                        <i class="uil uil-search"></i>
-                        <input id="search-drivers-input" class="container-drivers" name="search-drivers" type="text" placeholder="Rechercher un pilotes">
-                        <input id="search-ecuries-input" class="container-ecuries hide" name="search-drivers" type="text" placeholder="Rechercher une écurie">
-                        <input id="search-championnat-input" class="container-championnat hide" name="search-drivers" type="text" placeholder="Rechercher un pilotes">
-                    </div>
-
-                    <div class="select-btn-menu-drivers">
-
-                        <button onclick="toggleSectionPilotes('container-drivers')" data-type="pilotes" class="btn-container-drivers selected">PILOTES</button>
-                        <button onclick="toggleSectionPilotes('container-ecuries')" data-type="ecuries" class="btn-container-drivers">ÉCURIES</button>
-                        <button onclick="toggleSectionPilotes('container-championnat')" data-type="championnat" class="btn-container-drivers">CHAMPIONNAT</button>
-
-                    </div>
-
-                    <div class="container-drivers">
-                        <div class="list-drivers">
-                            <div class="redbull-sct">
-
-                                <div class="cards-drivers" data-keywords="Max Verstappen, Redbull">
-        
+                                <div class="top-card-drivers">
                                     <div class="img-drivers redbull">
                                         <img src="/assets/img/Pilotes/verstappen.png" alt="">
                                     </div>
-        
+
                                     <div class="infos-drivers">
                                         <h1>Max Verstappen</h1>
                                         <h2 class="redbull">Redbull Racing</h2>
-        
+
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 10 victoires</span>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Sergio Perez, Redbull">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ver')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ver')"><i id="ver" class="uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive ver">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Pays-Bas <img src="/assets/img/Flags/flag-paysbas.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>Hasselt <img src="/assets/img/Flags/flag-belgique.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>30-09-1997</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>203 </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>3 </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>109 </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>2917.5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Sergio Perez, Redbull">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers redbull">
                                         <img src="/assets/img/Pilotes/perez.png" alt="">
                                     </div>
-        
+
                                     <div class="infos-drivers">
                                         <h1>Sergio Perez</h1>
                                         <h2 class="redbull">Redbull Racing</h2>
-        
+
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 3 victoires</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('per')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('per')"><i id="per" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive per">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-paysbas.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-belgique.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-        
-                            <div class="ferrari-sct">
-                                <div class="cards-drivers" data-keywords="Charles Leclerc, Ferrari">
-        
+
+                        </div>
+
+                        <div class="ferrari-sct">
+                            <div class="card-drivers" data-keywords="Charles Leclerc, Ferrari">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers ferrari">
                                         <img src="/assets/img/Pilotes/leclerc.png" alt="">
                                     </div>
-        
+
                                     <div class="infos-drivers">
                                         <h1>Charles Leclerc</h1>
                                         <h2 class="ferrari">Scuderia Ferrari</h2>
-        
+
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 7 victoires</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Carlos Sainz, Ferrari">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('lec')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('lec')"><i id="lec" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive lec">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Monaco <img src="/assets/img/Flags/flag-monaco.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>Monaco <img src="/assets/img/Flags/flag-monaco.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>16-10-1997</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>0</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Carlos Sainz, Ferrari">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers ferrari">
                                         <img src="/assets/img/Pilotes/sainz.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Carlos Sainz</h1>
                                         <h2 class="ferrari">Scuderia Ferrari</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 3 victoires</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('sai')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('sai')"><i id="sai" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive sai">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Espagne <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>0</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
-        
-                            <div class="astonmartin-sct">
-                                <div class="cards-drivers" data-keywords="Fernando Alonzo, Aston Martin">
-        
+                        </div>
+
+                        <div class="astonmartin-sct">
+                            <div class="card-drivers" data-keywords="Fernando Alonzo, Aston Martin">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers astonmartin">
                                         <img src="/assets/img/Pilotes/alonzo.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Fernando Alonzo</h1>
                                         <h2 class="astonmartin">Aston Martin</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Lance Stroll, Aston Martin">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('alo')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('alo')"><i id="alo" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive alo">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Espagne <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>0</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Lance Stroll, Aston Martin">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers astonmartin">
                                         <img src="/assets/img/Pilotes/stroll.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Lance Stroll</h1>
                                         <h2 class="astonmartin">Aston Martin</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('str')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('str')"><i id="str" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive str">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Espagne <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-espagne.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>0</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
-        
-                            <div class="mercedes-sct">
-                                <div class="cards-drivers" data-keywords="Lewis Hamilton, Mercedes AMG Petronas">
-        
+                        </div>
+
+                        <div class="mercedes-sct">
+                            <div class="card-drivers" data-keywords="Lewis Hamilton, Mercedes AMG Petronas">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers mercedes">
                                         <img src="/assets/img/Pilotes/hamilton.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Lewis Hamilton</h1>
                                         <h2 class="mercedes">Mercedes</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 105 victoires</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="George Russell, Mercedes AMG Petronas">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ham')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ham')"><i id="ham" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive ham">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Grande-Bretagne <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="George Russell, Mercedes AMG Petronas">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers mercedes">
                                         <img src="/assets/img/Pilotes/russel.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>George Russell</h1>
                                         <h2 class="mercedes">Mercedes</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 5 victoires</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('rus')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('rus')"><i id="rus" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive rus">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Grande-Bretagne <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
-        
-                            <div class="alpine-sct">
-                                <div class="cards-drivers" data-keywords="Pierre Gasly, Alpine">
-        
+                        </div>
+
+                        <div class="alpine-sct">
+                            <div class="card-drivers" data-keywords="Pierre Gasly, Alpine">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers alpine">
                                         <img src="/assets/img/Pilotes/gasly.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Pierre Gasly</h1>
                                         <h2 class="alpine">Alpine </h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 1 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Estaban Ocon, Alpine">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('gas')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('gas')"><i id="gas" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive gas">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Estaban Ocon, Alpine">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers alpine">
                                         <img src="/assets/img/Pilotes/ocon.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Esteban Ocon</h1>
                                         <h2 class="alpine">Alpine </h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 1 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="alpharomeo-sct">
-                                <div class="cards-drivers" data-keywords="Valterri Bottas, Alpha Romeo">
-        
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('oco')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('oco')"><i id="oco" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive oco">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="alpharomeo-sct">
+                            <div class="card-drivers" data-keywords="Valterri Bottas, Alpha Romeo">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers alpharomeo">
                                         <img src="/assets/img/Pilotes/bottas.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Valtteri Bottas</h1>
                                         <h2 class="alpharomeo">Alpha Roméo</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Guanyu Zhou, Alpha Romeo">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('bot')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('bot')"><i id="bot" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive bot">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Guanyu Zhou, Alpha Romeo">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers alpharomeo">
                                         <img src="/assets/img/Pilotes/zhou.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Guanyu Zhou</h1>
                                         <h2 class="alpharomeo">Alpha Roméo</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="mclaren-sct">
-                                <div class="cards-drivers" data-keywords="Lando Norris, McLaren">
-        
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('zho')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('zho')"><i id="zho" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive zho">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mclaren-sct">
+                            <div class="card-drivers" data-keywords="Lando Norris, McLaren">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers mclaren">
                                         <img src="/assets/img/Pilotes/norris.png" alt="">
-                                    </div>  
-        
+                                    </div>
+    
                                     <div class="infos-drivers">
                                         <h1>Lando Norris</h1>
                                         <h2 class="mclaren">McLaren</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 3 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Oscar Piastri, McLaren">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('nor')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('nor')"><i id="nor" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive nor">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Grande-Bretagne <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-gb.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Oscar Piastri, McLaren">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers mclaren">
                                         <img src="/assets/img/Pilotes/piastri.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Oscar Piastri</h1>
                                         <h2 class="mclaren">McLaren</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 2 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="williams-sct">
-                                <div class="cards-drivers" data-keywords="Logan Sergeant, Williams">
-        
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('pia')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('pia')"><i id="pia" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive pia">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Australie <img src="/assets/img/Flags/flag-melbourn.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>Melbourne <img src="/assets/img/Flags/flag-melbourn.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="williams-sct">
+                            <div class="card-drivers" data-keywords="Logan Sergeant, Williams">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers williams">
                                         <img src="/assets/img/Pilotes/logan.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Logan Sargeant</h1>
                                         <h2 class="williams">Williams</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Alexander Albon, Wiliams">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ser')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ser')"><i id="ser" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive ser">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Alexander Albon, Wiliams">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers williams">
                                         <img src="/assets/img/Pilotes/albon.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Alexander Albon</h1>
                                         <h2 class="williams">Williams</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="hass-sct">
-                                <div class="cards-drivers" data-keywords="Kevin Magnussen, Hass">
-        
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('alb')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('alb')"><i id="alb" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive alb">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="hass-sct">
+                            <div class="card-drivers" data-keywords="Kevin Magnussen, Hass">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers hass">
                                         <img src="/assets/img/Pilotes/magnussen.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Kévin Magnussen</h1>
                                         <h2 class="hass">Hass </h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Nico Hulkenberg, Hass">
-        
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('mag')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('mag')"><i id="mag" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive mag">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Nico Hulkenberg, Hass">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers hass">
                                         <img src="/assets/img/Pilotes/nico.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Nico Hülkenberg</h1>
                                         <h2 class="hass">Hass </h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
-        
                                 </div>
-                            </div>
 
-                            <div class="alphatauri-sct">
-                                <div class="cards-drivers" data-keywords="Yuki Tsunoda, AlphaTauri">
-        
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('hul')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('hul')"><i id="hul" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive hul">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="alphatauri-sct">
+                            <div class="card-drivers" data-keywords="Yuki Tsunoda, AlphaTauri">
+
+                               <div class="top-card-drivers">
                                     <div class="img-drivers alphatauri">
                                         <img src="/assets/img/Pilotes/tsunoda.png" alt="">
                                     </div>
-        
+
                                     <div class="infos-drivers">
                                         <h1>Yuki Tsunoda</h1>
                                         <h2 class="alphatauri">AlphaTauri</h2>
-        
+
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
-        
+                               </div>
+
+                               <div class="bottom-card-drivers" onclick="toggleInfosDriver('tsu')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('tsu')"><i id="tsu" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive tsu">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>France <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>null <img src="/assets/img/Flags/flag-france.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
                                 </div>
-        
-                                <div class="cards-drivers" data-keywords="Daniel Ricciardo, AlphaTauri">
-        
+
+                            </div>
+
+                            <div class="card-drivers" data-keywords="Daniel Ricciardo, AlphaTauri">
+
+                                <div class="top-card-drivers">
                                     <div class="img-drivers alphatauri">
                                         <img src="/assets/img/Pilotes/ricciardo.png" alt="">
                                     </div>
-        
+    
                                     <div class="infos-drivers">
                                         <h1>Daniel Ricciardo</h1>
                                         <h2 class="alphatauri">AlphaTauri</h2>
-        
+    
                                         <div class="stats-drivers">
                                             <span><i class="uil uil-trophy"></i> 0 victoire</span>
                                         </div>
                                     </div>
-        
                                 </div>
+
+                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ric')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ric')"><i id="ric" class=" uil uil-angle-down"></i></div>
+
+                                <div class="content-drivers-responsive ric">
+                                    <ul>
+                                        <li>
+                                            <span> Pays :</span>
+                                            <span>Australie <img src="/assets/img/Flags/flag-melbourn.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Lieu de naissance :</span>
+                                            <span>Melbourne <img src="/assets/img/Flags/flag-melbourn.png" alt=""></span>
+                                        </li>
+
+                                        <li>
+                                            <span> Date de naissance :</span>
+                                            <span>00-00-0000</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Grand-Prix réalisés :</span>
+                                            <span>null</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Championnat du monde :</span>
+                                            <span>7</span>
+                                        </li>
+
+                                        <li>
+                                            <span> Podiums :</span>
+                                            <span>null </span>
+                                        </li>
+
+                                        <li>
+                                            <span> Points total :</span>
+                                            <span>null</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="container-ecuries hide">
-                        <div class="list-ecuries">
-                            
-                            <div class="cards-ecuries redbull" data-keywords="Redbull">
-                                <h1>Red Bull Racing</h1>
+                <div class="container-ecuries hide">
+                    <div class="list-ecuries">
 
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/redbull_sticker.png" alt="">
-                                </div>
+                        <div class="cards-ecuries redbull" data-keywords="Redbull">
+                            <h1>Red Bull Racing</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/redbull_sticker.png" alt="">
                             </div>
-
-                            <div class="cards-ecuries ferrari">
-                                <h1>Scuderia Ferrari</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/ferrari_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries mercedes">
-                                <h1>Mercedes AMG Petronas</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/mercedes_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries astonmartin">
-                                <h1>Aston Martin</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/astonmartin_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries alpine">
-                                <h1>Alpine</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/alpine_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries mclaren">
-                                <h1>McLaren</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/mclaren_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries alpharomeo">
-                                <h1>Alpha Romeo</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/alpharomeo_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries hass">
-                                <h1>Haas</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/hass_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries alphatauri">
-                                <h1>AlphaTauri</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/alphatauri_sticker.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="cards-ecuries williams">
-                                <h1>Williams</h1>
-
-                                <div class="img-drivers">
-                                    <img src="/assets/img/Monoplace F1/williams_sticker.png" alt="">
-                                </div>
-                            </div>
-
                         </div>
+
+                        <div class="cards-ecuries ferrari">
+                            <h1>Scuderia Ferrari</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/ferrari_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries mercedes">
+                            <h1>Mercedes AMG Petronas</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/mercedes_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries astonmartin">
+                            <h1>Aston Martin</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/astonmartin_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries alpine">
+                            <h1>Alpine</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/alpine_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries mclaren">
+                            <h1>McLaren</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/mclaren_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries alpharomeo">
+                            <h1>Alpha Romeo</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/alpharomeo_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries hass">
+                            <h1>Haas</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/hass_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries alphatauri">
+                            <h1>AlphaTauri</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/alphatauri_sticker.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="cards-ecuries williams">
+                            <h1>Williams</h1>
+
+                            <div class="img-drivers">
+                                <img src="/assets/img/Monoplace F1/williams_sticker.png" alt="">
+                            </div>
+                        </div>
+
                     </div>
+                </div>
 
-                    <div class="container-championnat hide">
+                <div class="container-championnat hide">
 
-                        <div class="card-table-championnat">
+                    <div class="card-table-championnat">
 
-                            <div class="title-table-championnat">
-                                
-                                <div class="item-left-table">
-                                    <h2>CLASSEMENT</h2>
+                        <div class="title-table-championnat">
 
-                                    <div class="btn-championnat-select">
-                                        <button class="btn-select-championnat-1 active" onclick="toggleActiveClass(this)">2023</button>
-                                        <button class="btn-select-championnat-2" onclick="toggleActiveClass(this)">2024</button>
-                                    </div>
+                            <div class="item-left-table">
+                                <h2>CLASSEMENT</h2>
+
+                                <div class="btn-championnat-select">
+                                    <button class="btn-select-championnat-1 active"
+                                        onclick="toggleActiveClass(this)">2023</button>
+                                    <button class="btn-select-championnat-2"
+                                        onclick="toggleActiveClass(this)">2024</button>
                                 </div>
-
-                                <a href="">Filtrer 
-                                    <i class="uil uil-angle-down"></i>
-                                </a>
                             </div>
 
-                            <!--<div class="line-table-championnat"></div>-->
+                            <a href="">Filtrer
+                                <i class="uil uil-angle-down"></i>
+                            </a>
+                        </div>
 
-                            <table class="table-championnat">
-                                <thead>
-                                  <tr>
+                        <!--<div class="line-table-championnat"></div>-->
+
+                        <table class="table-championnat">
+                            <thead>
+                                <tr>
                                     <th>Position</th>
                                     <th>Nom</th>
                                     <th>Écurie</th>
                                     <th>Victoires</th>
                                     <th>Podium</th>
                                     <th>Points</th>
-                                  </tr>
-                                </thead>
+                                </tr>
+                            </thead>
 
-                                <tbody>
-                                  <tr>
+                            <tbody>
+                                <tr>
                                     <td>1</td>
                                     <td>null</td>
                                     <td>null</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td>0</td>
-                                  </tr>
+                                </tr>
 
-                                  <tr>
+                                <tr>
                                     <td>2</td>
                                     <td>null</td>
                                     <td>null</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td>0</td>
-                                  </tr>
-                                  
-                                </tbody>
-                              </table>
+                                </tr>
 
-                        </div>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
-
             </div>
-        </section>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        </div>
+    </section>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
