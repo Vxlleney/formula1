@@ -1064,14 +1064,14 @@ body{
                                 width: 100%;
                             }
                             
-                            .cards-drivers{
+                            .card-drivers{
                                 height: auto;
                                 width: 430px;
                                 background-color: $color-card;
                                 border-radius: 15px;
-                                padding: 15px 25px;
+                                padding: 0 25px;
                                 display: flex;
-                                gap: 20px;
+                                flex-direction: column;
                                 margin-bottom: 20px;
                                 margin-right: 10px;
                                 margin-left: 10px;
@@ -1079,134 +1079,219 @@ body{
                                 @media screen and (max-width: 500px) {
                                     width: 100%;
                                     margin: 20px auto auto 0;
-                                    padding: 15px 20px;
+                                    padding: 15p x 20px;
                                 }
 
-    
-                                .img-drivers{
-                                    width: 80px;
-                                    height: auto;
-                                    border-radius: 50%;
+                                .top-card-drivers{
+                                    display: flex;
+                                    gap: 20px;
+                                    margin: 15px 0 0 0;
+                                
+                                    .img-drivers{
+                                        width: 80px;
+                                        height: auto;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        padding: 3px;
+
+                                        img{
+                                            border-radius: 50%;
+                                        }
+        
+                                        &.redbull{
+                                            border: 2px solid $color-redull;
+                                        }
+        
+                                        &.ferrari{
+                                            border: 2px solid $color-ferrari;
+                                        }
+        
+                                        &.astonmartin{
+                                            border: 2px solid $color-astonmartin;
+                                        }
+        
+                                        &.mercedes{
+                                            border: 2px solid $color-mercedes;
+                                        }
+        
+                                        &.alpine{
+                                            border: 2px solid $color-alpine;
+                                        }
+        
+                                        &.alphatauri{
+                                            border: 2px solid $color-alphatauri;
+                                        }
+        
+                                        &.alpharomeo{
+                                            border: 2px solid $color-alpharomeo;
+                                        }
+        
+                                        &.hass{
+                                            border: 2px solid $color-hass;
+                                        }
+        
+                                        &.mclaren{
+                                            border: 2px solid $color-mclaren;
+                                        }
+        
+                                        &.williams{
+                                            border: 2px solid $color-williams;
+                                        }
+                                    }
+        
+                                    .infos-drivers{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        gap: 5px;
+                                        color: $color-text-b;
+        
+                                        h1{
+                                            font-size: 1rem;
+                                        }
+        
+                                        h2{
+                                            font-size: .90rem;
+        
+                                            &.redbull{
+                                                color: $color-redull;
+                                            }
+        
+                                            &.ferrari{
+                                                color: $color-ferrari;
+                                            }
+        
+                                            &.astonmartin{
+                                                color: $color-astonmartin;
+                                            }
+        
+                                            &.mercedes{
+                                                color: $color-mercedes;
+                                            }
+        
+                                            &.alpine{
+                                                color: $color-alpine;
+                                            }
+        
+                                            &.williams{
+                                                color: $color-williams;
+                                            }
+        
+                                            &.mclaren{
+                                                color: $color-mclaren;
+                                            }
+        
+                                            &.hass{
+                                                color: $color-hass;
+                                            }
+        
+                                            &.alphatauri{
+                                                color: $color-alphatauri;
+                                            }
+        
+                                            &.alpharomeo{
+                                                color: $color-alpharomeo;
+                                            }
+                                        }
+
+                                        .stats-drivers{
+                                            padding-top: 15px;
+                                            display: flex;
+                                            gap: 30px;
+        
+                                            span{
+                                                font-size: .80rem;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 5px;
+        
+                                                i{
+                                                    font-size: .8rem;
+                                                    color: yellow;
+                                                }
+                                            }
+                                        }
+                                    }
+                                } 
+                                
+                                .bottom-card-drivers{
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    padding: 3px;
+                                    margin: 0 auto;
+                                    color: $color-1;
+                                    font-size: .8rem;
+                                    padding: 15px 0;
+                                    cursor: pointer;
+                                    width: max-content;
 
-                                    img{
-                                        border-radius: 50%;
-                                    }
-    
-                                    &.redbull{
-                                        border: 2px solid $color-redull;
-                                    }
-    
-                                    &.ferrari{
-                                        border: 2px solid $color-ferrari;
-                                    }
-    
-                                    &.astonmartin{
-                                        border: 2px solid $color-astonmartin;
-                                    }
-    
-                                    &.mercedes{
-                                        border: 2px solid $color-mercedes;
-                                    }
-    
-                                    &.alpine{
-                                        border: 2px solid $color-alpine;
-                                    }
-    
-                                    &.alphatauri{
-                                        border: 2px solid $color-alphatauri;
-                                    }
-    
-                                    &.alpharomeo{
-                                        border: 2px solid $color-alpharomeo;
-                                    }
-    
-                                    &.hass{
-                                        border: 2px solid $color-hass;
-                                    }
-    
-                                    &.mclaren{
-                                        border: 2px solid $color-mclaren;
-                                    }
-    
-                                    &.williams{
-                                        border: 2px solid $color-williams;
+                                    @media screen and (max-width: 980px) {
+                                        display: none;
                                     }
                                 }
-    
-                                .infos-drivers{
-                                    display: flex;
-                                    flex-direction: column;
+
+                                .bottom-card-drivers-responsive{
+                                    display: none;
                                     justify-content: center;
-                                    gap: 5px;
-                                    color: $color-text-b;
-    
-                                    h1{
-                                        font-size: 1rem;
+                                    padding-bottom: 5px;
+
+                                    ver{
+                                        margin: 0;
                                     }
-    
-                                    h2{
-                                        font-size: .90rem;
-    
-                                        &.redbull{
-                                            color: $color-redull;
-                                        }
-    
-                                        &.ferrari{
-                                            color: $color-ferrari;
-                                        }
-    
-                                        &.astonmartin{
-                                            color: $color-astonmartin;
-                                        }
-    
-                                        &.mercedes{
-                                            color: $color-mercedes;
-                                        }
-    
-                                        &.alpine{
-                                            color: $color-alpine;
-                                        }
-    
-                                        &.williams{
-                                            color: $color-williams;
-                                        }
-    
-                                        &.mclaren{
-                                            color: $color-mclaren;
-                                        }
-    
-                                        &.hass{
-                                            color: $color-hass;
-                                        }
-    
-                                        &.alphatauri{
-                                            color: $color-alphatauri;
-                                        }
-    
-                                        &.alpharomeo{
-                                            color: $color-alpharomeo;
-                                        }
+
+                                    i{
+                                        cursor: pointer;
+                                        font-size: 2rem;
+                                        color: $color-1;
+                                        
+                                    }
+
+                                    &.none{
+                                        display: none;
+                                    }
+
+                                    @media screen and (max-width: 980px) {
+                                        display: flex;
                                     }
                                 }
 
-                                .stats-drivers{
-                                    padding-top: 15px;
-                                    display: flex;
-                                    gap: 30px;
+                                .content-drivers-responsive{
+                                    display: none;
+                                    
+                                    &.active{
+                                        display: initial;
+                                        padding: 5px 0 20px 0;
+                                    
+                                        ul{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 15px;
 
-                                    span{
-                                        font-size: .80rem;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 5px;
+                                            li{
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                gap: 5px;
+                                                color: $color-text-b;
+                                                font-size: .8rem;
 
-                                        i{
-                                            font-size: .8rem;
-                                            color: yellow;
+                                                img{
+                                                    width: auto;
+                                                    height: 15px;
+                                                }
+
+                                                span{
+                                                    display: flex;
+                                                    gap: 10px;
+                                                    font-weight: $w-font-4;
+
+                                                    &:nth-child(1){
+                                                        font-weight: $w-font-5;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
