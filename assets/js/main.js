@@ -97,7 +97,7 @@ inputElementCircuit?.addEventListener('input', filterElementsCircuit);
 const inputElementPilotes = document.getElementById('search-drivers-input');
 
 // Récupérer tous les éléments avec la classe "track"
-const trackElementsPilotes = document.getElementsByClassName('cards-drivers');
+const trackElementsPilotes = document.getElementsByClassName('card-drivers');
 
 function filterElementsPilotes() {
     // Récupérer le texte saisi dans l'input
