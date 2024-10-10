@@ -21,11 +21,38 @@ function toggleMenu() {
 }
 
 
+// ----------------- INFOS DRIVERS TOGGLE ----------------- //
+//function toggleInfosDriver() {}
+
+
+function toggleInfosDriverResponsive(namePilote) {
+
+    let piloteSelectedClass = "." + namePilote;
+    let piloteSelectedId = namePilote;
+
+    let infosDriversResponsive = document.querySelector(piloteSelectedClass);
+    let iconInfosDrivers = document.getElementById(piloteSelectedId);
+
+    if (infosDriversResponsive.classList.contains('active')) {
+        infosDriversResponsive.classList.remove('active');
+    } else {
+        infosDriversResponsive.classList.add('active');
+    }
+
+    if (iconInfosDrivers.classList.contains('uil-angle-down')) {
+        iconInfosDrivers.classList.remove('uil-angle-down');
+        iconInfosDrivers.classList.add('uil-angle-up');
+    } else {
+        iconInfosDrivers.classList.remove('uil-angle-up');
+        iconInfosDrivers.classList.add('uil-angle-down');
+    }
+}
 // ----------------- DELAI FONCTION  ----------------- //
 
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
+
 
 
 // ----------------- BARRE RECHERCHE CIRCUITS ----------------- //
