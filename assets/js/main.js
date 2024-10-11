@@ -22,23 +22,48 @@ function toggleMenu() {
 
 
 // ----------------- INFOS DRIVERS TOGGLE ----------------- //
-//function toggleInfosDriver() {}
 
+// Fonction sans responsive
+function viewInfosDrivers(namePilote) {
 
-function toggleInfosDriverResponsive(namePilote) {
+    let piloteSelectedId = document.getElementById('card-' + namePilote);
+    let piloteCard = document.getElementById('drivers');
+    
+    // Permet de cacher toutes les cartes pilotes
+    if (piloteCard.classList.contains('none')) {
+        piloteCard.classList.remove('none');
+    } else {
+        piloteCard.classList.add('none');
+        console.log("Hide ajouté");
+    }
+
+    // Permet d'affiche les infos précis d'un pilote sur toute la page
+    if (piloteSelectedId.classList.contains('active')) {
+        piloteSelectedId.classList.remove('active');
+        console.log("Active retiré");
+    } else {
+        piloteSelectedId.classList.add('active');
+        console.log("Active ajouté");
+    }
+
+}
+
+// Fonction responsive
+function viewInfosDriversResponsive(namePilote) {
 
     let piloteSelectedClass = "." + namePilote;
-    let piloteSelectedId = namePilote;
 
     let infosDriversResponsive = document.querySelector(piloteSelectedClass);
-    let iconInfosDrivers = document.getElementById(piloteSelectedId);
+    let iconInfosDrivers = document.getElementById(namePilote);
 
+    // Permet de cacher ou non le menu d'infos (en lien avec la flèche en dessous)
     if (infosDriversResponsive.classList.contains('active')) {
         infosDriversResponsive.classList.remove('active');
     } else {
         infosDriversResponsive.classList.add('active');
     }
 
+    // Permet de changer le sens de la flèche si le menu est descendu ou non
     if (iconInfosDrivers.classList.contains('uil-angle-down')) {
         iconInfosDrivers.classList.remove('uil-angle-down');
         iconInfosDrivers.classList.add('uil-angle-up');
@@ -78,7 +103,7 @@ function filterElementsCircuit() {
         // Vérifier si au moins un des mots-clés correspond au texte recherché
         const foundCircuit = keywordArrayCircuit.some(keywordCircuit => keywordCircuit.trim().indexOf(searchTextCircuit) !== -1);
 
-        // Afficher ou masquer l'élément en fonction du résultat de la détection
+        // Afficher ou masquer l'élément en fonction du résultat  de la détection
         if (foundCircuit) {
             elementCircuit.style.display = 'flex';
         } else {
@@ -148,12 +173,12 @@ function clickEvent(item) {
             titlePagePilotes.innerHTML = "Liste des pilotes";
             break;
 
-        case 'ecuries':
+        case 'teams':
             titlePagePilotes.innerHTML = "Liste des écuries";
             break;
 
         case 'championnat':
-            titlePagePilotes.innerHTML = "Championnat";
+            titlePagePilotes.innerHTML = "Championnat du monde";
             break;
     }
 
@@ -162,8 +187,9 @@ function clickEvent(item) {
 }
 
 function toggleSectionPilotes(sectionName) {
-    const allSectionsPilotes = document.querySelectorAll('.container-drivers, .container-ecuries, .container-championnat');
-   
+    const allSectionsPilotes = document.querySelectorAll('.container-drivers, .container-teams, .container-championnat');
+       
+    // Retire ou ajoute le hide au barre de recherche et aux sections en même temps
     allSectionsPilotes.forEach(function(section) {
         if (section.classList.contains(sectionName)) {
             section.classList.remove('hide');
