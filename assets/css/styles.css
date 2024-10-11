@@ -766,9 +766,6 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .search-drivers i 
   font-size: 1.2rem;
   color: #ffffff;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .search-drivers .container-drivers.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .search-drivers .container-ecuries.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .search-drivers .container-championnat.hide {
-  display: none;
-}
 body .sct-drivers .container-sct-drivers .content-sct-drivers .search-drivers input {
   border: none;
   font-size: 0.8rem;
@@ -838,6 +835,9 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+}
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers.none {
+  display: none;
 }
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers {
   width: 1370px;
@@ -1312,7 +1312,7 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
   width: -moz-max-content;
   width: max-content;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 979px) {
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .redbull-sct .card-drivers .bottom-card-drivers,
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .ferrari-sct .card-drivers .bottom-card-drivers,
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .mercedes-sct .card-drivers .bottom-card-drivers,
@@ -1378,7 +1378,7 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .alpharomeo-sct .card-drivers .bottom-card-drivers-responsive.none {
   display: none;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 979px) {
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .redbull-sct .card-drivers .bottom-card-drivers-responsive,
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .ferrari-sct .card-drivers .bottom-card-drivers-responsive,
   body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .mercedes-sct .card-drivers .bottom-card-drivers-responsive,
@@ -1487,7 +1487,7 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers .list-drivers .alpharomeo-sct .card-drivers .content-drivers-responsive.active ul li span:nth-child(1) {
   font-weight: 600;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams {
   width: auto;
   height: auto;
   display: flex;
@@ -1495,24 +1495,24 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries
   justify-content: center;
   margin: 0 auto;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams {
   width: 1370px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1490px) {
-  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries {
+  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams {
     width: 1020px;
     justify-content: center;
   }
 }
 @media screen and (max-width: 750px) {
-  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries {
+  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams {
     width: 100%;
   }
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams {
   height: auto;
   width: 430px;
   background-color: #08142b;
@@ -1527,111 +1527,111 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries
   cursor: pointer;
 }
 @media screen and (max-width: 510px) {
-  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries {
+  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
   }
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.redbull {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.redbull {
   border-left: 5px solid #1414ac;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.ferrari {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.ferrari {
   border-left: 5px solid #f91536;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.astonmartin {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.astonmartin {
   border-left: 5px solid #358c75;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.mercedes {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.mercedes {
   border-left: 5px solid #6cd3bf;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.alpine {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.alpine {
   border-left: 5px solid #2293d1;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.alphatauri {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.alphatauri {
   border-left: 5px solid #5e8faa;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.alpharomeo {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.alpharomeo {
   border-left: 5px solid #c92d4b;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.hass {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.hass {
   border-left: 5px solid #b6babd;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.mclaren {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.mclaren {
   border-left: 5px solid #f58020;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries.williams {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams.williams {
   border-left: 5px solid #37bedd;
 }
 @media screen and (max-width: 510px) {
-  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries {
+  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams {
     width: 100%;
   }
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries h1 {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams h1 {
   font-size: 1.2rem;
   color: #ffffff;
 }
 @media screen and (max-width: 980px) {
-  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries h1 {
+  body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams h1 {
     text-align: center;
   }
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
   color: #ffffff;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries h1 {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams h1 {
   font-size: 1rem;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries h2 {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams h2 {
   font-size: 0.9rem;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.redbull {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.redbull {
   color: #1414ac;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.ferrari {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.ferrari {
   color: #f91536;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.astonmartin {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.astonmartin {
   color: #358c75;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.mercedes {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.mercedes {
   color: #6cd3bf;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.alpine {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.alpine {
   color: #2293d1;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.williams {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.williams {
   color: #37bedd;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.mclaren {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.mclaren {
   color: #f58020;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.hass {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.hass {
   color: #b6babd;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.alphatauri {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.alphatauri {
   color: #5e8faa;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .infos-ecuries.alpharomeo {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .infos-teams.alpharomeo {
   color: #c92d4b;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .stats-drivers {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .stats-drivers {
   padding-top: 15px;
   display: flex;
   gap: 30px;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .stats-drivers span {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .stats-drivers span {
   font-size: 0.8rem;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries .list-ecuries .cards-ecuries .stats-drivers span i {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams .list-teams .cards-teams .stats-drivers span i {
   font-size: 0.8rem;
   color: yellow;
 }
@@ -1770,7 +1770,7 @@ body .sct-drivers .container-sct-drivers .content-sct-drivers .container-champio
 body .sct-drivers .container-sct-drivers .content-sct-drivers .container-championnat .card-championnat.williams {
   border-left: 5px solid #37bedd;
 }
-body .sct-drivers .container-sct-drivers .content-sct-drivers .container-championnat.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .container-ecuries.hide {
+body .sct-drivers .container-sct-drivers .content-sct-drivers .container-championnat.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .container-drivers.hide, body .sct-drivers .container-sct-drivers .content-sct-drivers .container-teams.hide {
   display: none;
 }
 body .sct-login {
