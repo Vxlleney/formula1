@@ -40,8 +40,8 @@
             </ul>
 
             <div class="btn-nav">
-                <a class="btn-login" href="">CONNEXION</a>
-                <a class="btn-signin" href="">INSCRIPTION</a>
+                <a class="btn-login" href="connexion.html">CONNEXION</a>
+                <a class="btn-signin" href="connexion.html">INSCRIPTION</a>
             </div>
 
             <i class="uil uil-align-center-alt hamburger" onclick="toggleMenu()"></i>
@@ -93,7 +93,7 @@
                     <i class="uil uil-search"></i>
                     <input id="search-drivers-input" class="container-drivers" name="search-drivers" type="text"
                         placeholder="Rechercher un pilotes">
-                    <input id="search-ecuries-input" class="container-ecuries hide" name="search-drivers" type="text"
+                    <input id="search-teams-input" class="container-teams hide" name="search-drivers" type="text"
                         placeholder="Rechercher une écurie">
                     <input id="search-championnat-input" class="container-championnat hide" name="search-drivers"
                         type="text" placeholder="Rechercher un pilotes">
@@ -103,14 +103,19 @@
 
                     <button onclick="toggleSectionPilotes('container-drivers')" data-type="pilotes"
                         class="btn-container-drivers selected">PILOTES</button>
-                    <button onclick="toggleSectionPilotes('container-ecuries')" data-type="ecuries"
+                    <button onclick="toggleSectionPilotes('container-teams')" data-type="teams"
                         class="btn-container-drivers">ÉCURIES</button>
                     <button onclick="toggleSectionPilotes('container-championnat')" data-type="championnat"
                         class="btn-container-drivers">CHAMPIONNAT</button>
 
                 </div>
 
-                <div class="container-drivers">
+                <div class="card-infos-drivers" id="card-lec">
+
+
+                </div>
+
+                <div id="drivers" class="container-drivers hide">
                     <div class="list-drivers">
                         <div class="redbull-sct">
 
@@ -132,8 +137,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ver')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ver')"><i id="ver" class="uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('ver')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('ver')"><i id="ver" class="uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive ver">
                                     <ul>
@@ -192,8 +197,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('per')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('per')"><i id="per" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('per')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('per')"><i id="per" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive per">
                                     <ul>
@@ -255,8 +260,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('lec')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('lec')"><i id="lec" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('lec')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('lec')"><i id="lec" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive lec">
                                     <ul>
@@ -316,8 +321,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('sai')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('sai')"><i id="sai" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('sai')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('sai')"><i id="sai" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive sai">
                                     <ul>
@@ -379,8 +384,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('alo')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('alo')"><i id="alo" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('alo')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('alo')"><i id="alo" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive alo">
                                     <ul>
@@ -440,8 +445,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('str')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('str')"><i id="str" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('str')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('str')"><i id="str" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive str">
                                     <ul>
@@ -503,8 +508,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ham')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ham')"><i id="ham" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('ham')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('ham')"><i id="ham" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive ham">
                                     <ul>
@@ -564,8 +569,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('rus')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('rus')"><i id="rus" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('rus')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('rus')"><i id="rus" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive rus">
                                     <ul>
@@ -627,8 +632,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('gas')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('gas')"><i id="gas" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('gas')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('gas')"><i id="gas" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive gas">
                                     <ul>
@@ -688,8 +693,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('oco')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('oco')"><i id="oco" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('oco')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('oco')"><i id="oco" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive oco">
                                     <ul>
@@ -751,8 +756,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('bot')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('bot')"><i id="bot" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('bot')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('bot')"><i id="bot" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive bot">
                                     <ul>
@@ -812,8 +817,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('zho')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('zho')"><i id="zho" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('zho')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('zho')"><i id="zho" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive zho">
                                     <ul>
@@ -875,8 +880,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('nor')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('nor')"><i id="nor" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('nor')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('nor')"><i id="nor" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive nor">
                                     <ul>
@@ -936,8 +941,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('pia')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('pia')"><i id="pia" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('pia')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('pia')"><i id="pia" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive pia">
                                     <ul>
@@ -999,8 +1004,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ser')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ser')"><i id="ser" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('ser')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('ser')"><i id="ser" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive ser">
                                     <ul>
@@ -1060,8 +1065,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('alb')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('alb')"><i id="alb" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('alb')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('alb')"><i id="alb" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive alb">
                                     <ul>
@@ -1123,8 +1128,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('mag')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('mag')"><i id="mag" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('mag')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('mag')"><i id="mag" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive mag">
                                     <ul>
@@ -1184,8 +1189,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('hul')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('hul')"><i id="hul" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('hul')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('hul')"><i id="hul" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive hul">
                                     <ul>
@@ -1247,8 +1252,8 @@
                                     </div>
                                </div>
 
-                               <div class="bottom-card-drivers" onclick="toggleInfosDriver('tsu')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('tsu')"><i id="tsu" class=" uil uil-angle-down"></i></div>
+                               <div class="bottom-card-drivers" onclick="viewInfosDrivers('tsu')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('tsu')"><i id="tsu" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive tsu">
                                     <ul>
@@ -1308,8 +1313,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bottom-card-drivers" onclick="toggleInfosDriver('ric')">Plus d'infos</div>
-                                <div class="bottom-card-drivers-responsive" onclick="toggleInfosDriverResponsive('ric')"><i id="ric" class=" uil uil-angle-down"></i></div>
+                                <div class="bottom-card-drivers" onclick="viewInfosDrivers('ric')">Plus d'infos</div>
+                                <div class="bottom-card-drivers-responsive" onclick="viewInfosDriversResponsive('ric')"><i id="ric" class=" uil uil-angle-down"></i></div>
 
                                 <div class="content-drivers-responsive ric">
                                     <ul>
@@ -1355,10 +1360,10 @@
                     </div>
                 </div>
 
-                <div class="container-ecuries hide">
-                    <div class="list-ecuries">
+                <div class="container-teams hide">
+                    <div class="list-teams">
 
-                        <div class="cards-ecuries redbull" data-keywords="Redbull">
+                        <div class="cards-teams redbull" data-keywords="Redbull">
                             <h1>Red Bull Racing</h1>
 
                             <div class="img-drivers">
@@ -1366,7 +1371,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries ferrari">
+                        <div class="cards-teams ferrari">
                             <h1>Scuderia Ferrari</h1>
 
                             <div class="img-drivers">
@@ -1374,7 +1379,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries mercedes">
+                        <div class="cards-teams mercedes">
                             <h1>Mercedes AMG Petronas</h1>
 
                             <div class="img-drivers">
@@ -1382,7 +1387,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries astonmartin">
+                        <div class="cards-teams astonmartin">
                             <h1>Aston Martin</h1>
 
                             <div class="img-drivers">
@@ -1390,7 +1395,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries alpine">
+                        <div class="cards-teams alpine">
                             <h1>Alpine</h1>
 
                             <div class="img-drivers">
@@ -1398,7 +1403,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries mclaren">
+                        <div class="cards-teams mclaren">
                             <h1>McLaren</h1>
 
                             <div class="img-drivers">
@@ -1406,7 +1411,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries alpharomeo">
+                        <div class="cards-teams alpharomeo">
                             <h1>Alpha Romeo</h1>
 
                             <div class="img-drivers">
@@ -1414,7 +1419,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries hass">
+                        <div class="cards-teams hass">
                             <h1>Haas</h1>
 
                             <div class="img-drivers">
@@ -1422,7 +1427,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries alphatauri">
+                        <div class="cards-teams alphatauri">
                             <h1>AlphaTauri</h1>
 
                             <div class="img-drivers">
@@ -1430,7 +1435,7 @@
                             </div>
                         </div>
 
-                        <div class="cards-ecuries williams">
+                        <div class="cards-teams williams">
                             <h1>Williams</h1>
 
                             <div class="img-drivers">
